@@ -3,7 +3,7 @@ class FastList {
   String? mobile;
   String? image;
 
-  //สร้าง constructor
+
   FastList({
     this.name,
     this.mobile,
