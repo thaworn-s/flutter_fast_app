@@ -13,7 +13,7 @@ class _SplashScreenUIState extends State<SplashScreenUI> {
   void initState() {
     Future.delayed(
       Duration(
-        seconds: 2,
+        seconds: 3,
       ),
       () => Navigator.pushReplacement(
         context,
