@@ -82,7 +82,7 @@ class _HomeUIState extends State<HomeUI> {
                       );
                     },
                     leading: Image.asset(
-                      'assets/images/' + FastListInfo[Index].image!,
+                      'images/' + FastListInfo[Index].image!,
                     ),
                     title: Text(
                       FastListInfo[Index].name!,

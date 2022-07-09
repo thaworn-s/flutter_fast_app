@@ -40,11 +40,12 @@ class _DetialUIState extends State<DetialUI> {
         child: Column(
           children: [
             Image.asset(
-              'assets/images/' + widget.image!,
+              'images/' + widget.image!,
             ),
           ],
         ),
       ),
+      backgroundColor: Colors.grey,
     );
   }
 }
