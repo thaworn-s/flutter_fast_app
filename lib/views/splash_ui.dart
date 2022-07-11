@@ -33,10 +33,9 @@ class _SplashScreenUIState extends State<SplashScreenUI> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
-              radius: 170,
-              backgroundColor: Colors.transparent,
-              backgroundImage: AssetImage(
+            Container(
+              width: 400,
+              child: Image.asset(
                 'assets/images/cross.png',
               ),
             ),

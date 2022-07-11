@@ -26,13 +26,15 @@ class _DetialUIState extends State<DetialUI> {
             Navigator.pop(context);
           },
           icon: Icon(
-            Icons.arrow_back_ios,
+            Icons.arrow_back,
           ),
         ),
-        title: Text(
-          'FAST',
-          style: TextStyle(
-            fontSize: 40,
+        title: Center(
+          child: Text(
+            'FAST',
+            style: TextStyle(
+              fontSize: 40,
+            ),
           ),
         ),
       ),

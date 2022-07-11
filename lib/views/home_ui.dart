@@ -29,8 +29,8 @@ class _HomeUIState extends State<HomeUI> {
       image: 'fast3.png',
     ),
     FastList(
-      name: "สายด่วน 1669",
-      mobile: "1660",
+      name: "โรงพยาบาล",
+      mobile: "",
       image: 'fast4.png',
     ),
   ];
