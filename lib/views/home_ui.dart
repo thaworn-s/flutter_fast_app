@@ -37,15 +37,12 @@ class _HomeUIState extends State<HomeUI> {
         child: ListView(
           children: [
             Card(
-              
               color: Colors.blueGrey,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   const ListTile(
-                    
-                    title: Text(
-                      'เจ็บป่วยฉุกเฉินโทร 1669',
+                    title: Text('เจ็บป่วยฉุกเฉินโทร 1669',
                         style: TextStyle(
                           fontSize: 20.0,
                           color: Colors.black,
@@ -53,23 +50,24 @@ class _HomeUIState extends State<HomeUI> {
                     subtitle: Text(
                       'โทรฟรี อย่าโทรเล่น...',
                       style: TextStyle(
-                         color: Colors.black,
+                        color: Colors.black,
                       ),
-                      ),
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
-                      Icon(Icons.phone_android,
-                      size: 30.0,
-                       color: Colors.red[700],
+                      Icon(
+                        Icons.phone_android,
+                        size: 30.0,
+                        color: Colors.red[700],
                       ),
                       TextButton(
                         child: const Text(
                           'โทร 1669 ',
                           style: TextStyle(
                             fontSize: 25.0,
-                             color: Colors.black,
+                            color: Colors.black,
                           ),
                         ),
                         onPressed: () {/* ... */},
@@ -79,14 +77,6 @@ class _HomeUIState extends State<HomeUI> {
                 ],
               ),
             ),
-
-            
-
-
-
-
-
-
           ],
         ),
       ),
