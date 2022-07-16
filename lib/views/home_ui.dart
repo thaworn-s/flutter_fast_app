@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:fast_app/main.dart';
 import 'package:flutter/material.dart';
 
 class HomeUI extends StatefulWidget {
@@ -17,7 +18,7 @@ class _HomeUIState extends State<HomeUI> {
         actions: [
           IconButton(
               icon: Icon(
-                color: Colors.amber,
+                color: Colors.white,
                 size: 30.0,
                 Icons.search,
               ),
@@ -85,73 +86,72 @@ class _HomeUIState extends State<HomeUI> {
           SizedBox(
             height: 14.0,
           ),
-          Center(
-            child: Container(
-              child: Image.asset(
-                'assets/images/cross.png',
-              ),
-              height: 200,
-            ),
-          ),
-          SizedBox(
-            height: 15.0,
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: 95.0,
-              right: 95.0,
-            ),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'สายด่วน 1669',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.amber,
+          Row(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(13.0),
+                  color: Colors.white,
+                ),
+                height: 90,
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    Container(
+                      width: 90.0,
+                    ),
+                    // Text(
+                    //   'เรียกรถพยาบาย',
+                    //   style: TextStyle(
+                    //     color: Colors.black,
+                    //     fontSize: 15,
+                        
+                    //   ),
+                    // ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    // Image.asset(
+                    //   'assets/images/fast1.png',
+                    //   height: 32.0,
+                    // ),
+                  ],
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 0, 58, 86),
-                minimumSize: const Size.fromHeight(
-                  80,
+              SizedBox(
+                width: 12.0,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(13.0),
+                  color: Colors.red,
                 ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    50.0,
-                  ),
+                height: 90,
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    Container(
+                      width: 90.0,
+                    ),
+                    // Text(
+                    //   'เรียกรถพยาบาย',
+                    //   style: TextStyle(
+                    //     color: Colors.black,
+                    //     fontSize: 15,
+                        
+                    //   ),
+                    // ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    // Image.asset(
+                    //   'assets/images/fast1.png',
+                    //   height: 32.0,
+                    // ),
+                  ],
                 ),
               ),
-            ),
-          ),
-          SizedBox(
-            height: 15.0,
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: 95.0,
-              right: 95.0,
-            ),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'สายด่วน 1669',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.amber,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 0, 58, 86),
-                minimumSize: const Size.fromHeight(
-                  80,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    50.0,
-                  ),
-                ),
-              ),
-            ),
+            ],
           ),
         ],
       ),
