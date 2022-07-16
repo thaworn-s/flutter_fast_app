@@ -88,34 +88,36 @@ class _HomeUIState extends State<HomeUI> {
           ),
           Row(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(13.0),
-                  color: Colors.white,
-                ),
-                height: 90,
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[
-                    Container(
-                      width: 90.0,
-                    ),
-                    // Text(
-                    //   'เรียกรถพยาบาย',
-                    //   style: TextStyle(
-                    //     color: Colors.black,
-                    //     fontSize: 15,
-                        
-                    //   ),
-                    // ),
-                    SizedBox(
-                      height: 15.0,
-                    ),
-                    // Image.asset(
-                    //   'assets/images/fast1.png',
-                    //   height: 32.0,
-                    // ),
-                  ],
+              Center(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(13.0),
+                    color: Colors.white,
+                  ),
+                  height: 100,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      Container(
+                        width: 100.0,
+                      ),
+                      TextButton(
+                        child: const Text(
+                          'โทร 1669 ',
+                          style: TextStyle(
+                            fontSize: 25.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                        onPressed: () {/* ... */},
+                      ),
+                      
+                      Image.asset(
+                        'assets/images/fast1.png',
+                        height: 32.0,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
@@ -126,30 +128,28 @@ class _HomeUIState extends State<HomeUI> {
                   borderRadius: BorderRadius.circular(13.0),
                   color: Colors.red,
                 ),
-                height: 90,
+                height: 100,
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
                     Container(
-                      width: 90.0,
+                      width: 100.0,
                     ),
-                    // Text(
-                    //   'เรียกรถพยาบาย',
-                    //   style: TextStyle(
-                    //     color: Colors.black,
-                    //     fontSize: 15,
-                        
-                    //   ),
-                    // ),
+                    Text(
+                      'เรียกรถพยาบาย',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                      ),
+                    ),
                     SizedBox(
                       height: 15.0,
                     ),
-                    // Image.asset(
-                    //   'assets/images/fast1.png',
-                    //   height: 32.0,
-                    // ),
                   ],
                 ),
+              ),
+              SizedBox(
+                width: 12.0,
               ),
             ],
           ),
