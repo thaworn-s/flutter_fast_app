@@ -1,7 +1,5 @@
-import 'dart:async';
-
-import 'package:fast_app/main.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_launcher_icons/android.dart';
 
 class HomeUI extends StatefulWidget {
   const HomeUI({Key? key}) : super(key: key);
@@ -15,147 +13,56 @@ class _HomeUIState extends State<HomeUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          IconButton(
-              icon: Icon(
-                color: Colors.white,
-                size: 30.0,
-                Icons.search,
-              ),
-              onPressed: () {}),
-        ],
-        backgroundColor: Color.fromARGB(255, 66, 66, 66),
-        title: Center(
-          child: Text(
-            "FAST",
-            style: TextStyle(
-              fontSize: 40,
-            ),
+        centerTitle: true,
+        title: Text(
+          'Fast...',
+          style: TextStyle(
+            fontSize: 35.0,
+            color: Colors.white,
           ),
         ),
+        backgroundColor: Color.fromARGB(255, 66, 66, 66),
       ),
-      drawer: Drawer(
-        child: ListView(
+      backgroundColor: Colors.grey,
+      body: SingleChildScrollView(
+        child: Column(
           children: [
-            Card(
-              color: Colors.blueGrey,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  const ListTile(
-                    title: Text('เจ็บป่วยฉุกเฉินโทร 1669',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.black,
-                        )),
-                    subtitle: Text(
-                      'โทรฟรี อย่าโทรเล่น...',
-                      style: TextStyle(
-                        color: Colors.black,
+            SizedBox(
+              height: 20.0,
+            ),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.width * 0.5,
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 3.0,
+                          color: Colors.grey,
+                        ),
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/cross.png',
+                          ),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone_android,
-                        size: 30.0,
-                        color: Colors.red[700],
-                      ),
-                      TextButton(
-                        child: const Text(
-                          'โทร 1669 ',
-                          style: TextStyle(
-                            fontSize: 25.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                        onPressed: () {/* ... */},
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                  ],
+                ),
+                
+              ],
             ),
           ],
         ),
       ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 14.0,
-          ),
-          Row(
-            children: [
-              Center(
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(13.0),
-                    color: Colors.white,
-                  ),
-                  height: 100,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: <Widget>[
-                      Container(
-                        width: 100.0,
-                      ),
-                      TextButton(
-                        child: const Text(
-                          'โทร 1669 ',
-                          style: TextStyle(
-                            fontSize: 25.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                        onPressed: () {/* ... */},
-                      ),
-                      
-                      Image.asset(
-                        'assets/images/fast1.png',
-                        height: 32.0,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 12.0,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(13.0),
-                  color: Colors.red,
-                ),
-                height: 100,
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[
-                    Container(
-                      width: 100.0,
-                    ),
-                    Text(
-                      'เรียกรถพยาบาย',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 15.0,
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 12.0,
-              ),
-            ],
-          ),
-        ],
-      ),
-      backgroundColor: Colors.grey,
     );
   }
 }
